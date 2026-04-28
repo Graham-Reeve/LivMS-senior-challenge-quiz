@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liverpool Maths Society Challenge Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="card hero">
+      <h1 id="quizTitle">Liverpool Maths Society Challenge Quiz</h1>
+      <p id="quizSubtitle">Enter your name, answer 20 questions, and see how many you get correct.</p>
+    </header>
+
+    <section id="startScreen" class="card screen active">
+      <h2>Start quiz</h2>
+      <form id="startForm">
+        <label for="studentName">Your name</label>
+        <input id="studentName" name="studentName" type="text" maxlength="80" required placeholder="Enter your full name" />
+
+        <label for="studentSchool">School or class (optional)</label>
+        <input id="studentSchool" name="studentSchool" type="text" maxlength="120" placeholder="Optional" />
+
+        <div class="actions">
+          <button type="submit">Begin</button>
+        </div>
+      </form>
+      <p class="note">Answers must be whole numbers.</p>
+    </section>
+
+    <section id="quizScreen" class="card screen" aria-live="polite">
+      <div class="quiz-meta">
+        <span id="progressText">Question 1 of 20</span>
+        <span id="timerText">Time: 0s</span>
+      </div>
+
+      <h2 id="questionPrompt"></h2>
+      <p id="questionHelp" class="muted"></p>
+
+      <form id="answerForm">
+        <label for="answerInput">Answer</label>
+        <input id="answerInput" name="answerInput" inputmode="numeric" autocomplete="off" required placeholder="Whole number" />
+        <div class="actions">
+          <button type="submit">Check answer</button>
+        </div>
+      </form>
+
+      <div id="feedbackBox" class="feedback hidden"></div>
+
+      <div class="actions hidden" id="nextActions">
+        <button id="nextBtn" type="button">Next</button>
+      </div>
+    </section>
+
+    <section id="endScreen" class="card screen">
+      <h2>Finished</h2>
+      <p id="summaryText"></p>
+      <div id="submissionStatus" class="feedback"></div>
+      <div class="actions">
+        <button id="restartBtn" type="button">Start again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

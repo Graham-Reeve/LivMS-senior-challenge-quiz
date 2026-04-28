@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Admin Leaderboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="card hero">
+      <h1>Quiz Admin Leaderboard</h1>
+      <p>Ranked by score, then by time taken.</p>
+    </header>
+
+    <section class="card">
+      <form id="adminForm">
+        <label for="adminKeyInput">Admin key</label>
+        <input id="adminKeyInput" type="password" placeholder="Enter admin key" required />
+        <div class="actions">
+          <button type="submit">Load results</button>
+        </div>
+      </form>
+      <div id="adminMessage" class="feedback hidden"></div>
+    </section>
+
+    <section class="card">
+      <div class="actions" style="justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap;">
+        <h2 style="margin: 0;">Results</h2>
+        <button id="downloadCsvBtn" type="button">Download CSV</button>
+      </div>
+      <div style="overflow-x:auto;">
+        <table id="resultsTable" style="width:100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th align="left">Rank</th>
+              <th align="left">Name</th>
+              <th align="left">School</th>
+              <th align="left">Score</th>
+              <th align="left">Time (s)</th>
+              <th align="left">Finished</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

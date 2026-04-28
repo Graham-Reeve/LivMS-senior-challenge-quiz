@@ -1,0 +1,101 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1d2533;
+  --muted: #5b6678;
+  --border: #d8deea;
+  --accent: #194d8b;
+  --success-bg: #e8f7ee;
+  --success-text: #115c2b;
+  --error-bg: #fbe9e9;
+  --error-text: #8e2020;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  margin-bottom: 16px;
+}
+.hero h1 { margin-top: 0; margin-bottom: 8px; }
+.hero p { margin: 0; color: var(--muted); }
+.screen { display: none; }
+.screen.active { display: block; }
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover { opacity: 0.95; }
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.note, .muted { color: var(--muted); }
+.quiz-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.feedback {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+.feedback.success {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+.feedback.error {
+  background: var(--error-bg);
+  color: var(--error-text);
+}
+.hidden { display: none; }
+code {
+  background: #eef2f8;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+@media (max-width: 640px) {
+  .quiz-meta { flex-direction: column; }
+}
+
+
+#questionPrompt, #questionHelp { white-space: pre-line; }
+#questionHelp { margin-top: 12px; }
