@@ -55,8 +55,8 @@ x + ky = 3`,
     answer: 6
   },
   {
-    prompt: "What is the units digit of 3 to the power 2019?",
-    answer: 7
+    prompt: "What is the units digit of 3 to the power 2026?",
+    answer: 9
   },
   {
     prompt: "If 3 to the power x is 4, find 3 to the power 2x+3.",
