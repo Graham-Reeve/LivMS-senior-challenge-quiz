@@ -84,8 +84,8 @@ x + ky = 3`,
     answer: 30
   },
   {
-    prompt: "Two boxes contain the same number of balls. One box contains 10 red and six blue balls. Taking one ball at random from each box it turns out that the probability that both balls are the same colour is exactly 1/2. How many red balls are there in the second box?",
-    answer: 8
+    prompt: "A bag contains red and blue counters. The probability of choosing a red counter is 1/3. After 4 red counters are added, the probability becomes 1/2. How many counters were originally in the bag?",
+    answer: 12
   },
   {
     prompt: "An equilateral triangle and a regular hexagon have equal perimeters. If the area of the triangle is 20, what is the area of the hexagon?",
