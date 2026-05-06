@@ -63,9 +63,8 @@ x + ky = 3`,
     answer: 432
   },
   {
-    prompt: "I think of a number, add 2, square the result, and subtract four times the number I first thought of. The answer is 53. What number did I start with?",
-    help: "The number I started with was negative.",
-    answer: -7
+    prompt: "A whole number is divided by 5 giving remainder 2. The same number is divided by 7 giving remainder 4. What is the smallest possible value of the number?",
+    answer: 32
   },
   {
     prompt: "How many integers greater than 1 million and less than 4 million are squares?",
